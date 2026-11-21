@@ -25,14 +25,16 @@ $$
 
 Restrict this measure to $\Re w\in I$ and write $M_X=|\mu_X|(\Re w\in I)$ for its total variation. The $M_X$ are bounded uniformly for $X\ge1$. On $|\eta|>1/2$ the factor $Xe^{-X|\eta|^2}$ is bounded, and $\eta'$ grows at most polynomially in height. On $|\eta|\le1/2$, change variables to $z=\eta(w)$. Jensen’s formula bounds the number of preimages of any $|z|\le1/2$ in a unit height band at $j$ by $O_I(\log(2+|j|))$. The Gaussian in $z$ has mass one. Multiplying this count by the supremum of $|H|$ on the band gives a summable bound, including a uniform bound tending to zero for the tails in height. [Jensen discs and area estimate](prime-two-denominators.md#every-wall).
 
-Let $A_h(s)=\{w:|\Re w-s|<h/2\}$. For $h$ small the walls lie in $I$ on the support of $\omega$. In the square of $\mu_X(A_h(s))$, a pair $w,z$ occurs only for centres $s$ in the intersection of two intervals of length $h$. The intersection has length at most $h$. Fubini and total variation therefore give
+Let $A_h(s)=\{w:|\Re w-s|<h/2\}$. For $h$ small the walls lie in $I$ on the support of $\omega$. Write $d\mu_X=\phi\,d|\mu_X|$. Expanding $|\mu_X(A_h(s))|^2$ gives the factor $\phi(w)\overline{\phi(z)}$ for each pair in $A_h(s)^2$. For fixed $w,z$ the allowed centres form the intersection of two open intervals of length $h$. Fubini applies since $\omega$ is integrable, $|\phi|\le1$ almost everywhere and $M_X$ is finite. The integral of $\omega$ over the intersection is bounded by $h\|\omega\|_\infty$, giving
 
 $$
 \int_{\mathbb R}\omega(s)|\mu_X(A_h(s))|^2\,ds
 \ \le\ h\|\omega\|_\infty M_X^2 .
 $$
 
-For the removed block $q(r)\le R(X)$, the coefficient derivative has $\ell^2$ norm $O_I(e^{-c_I S_d(X)})$ after the first limit. There are $O(R(X)^2)$ such ratios in the pulse. Integrating the derivative between the walls and applying Cauchy–Schwarz bounds their summed increment uniformly by $O_I(h R(X)e^{-c_I S_d(X)})=o(h)$. Its $L^2(\omega(s)\,ds)$ norm is consequently $o(h)$. The full increment has norm $O(\sqrt h)$ by the displayed inequality, so removing the block changes its squared norm by $o(h)$. This proves $E_X=O_{I,\omega}(h)$. [Coefficient estimate](prime-two-increments.md#prime-phases), [denominator cutoff](prime-two-increments.md#distinct-ratios) and [Lean overlap bound](PrimeTwoIncrements.lean).
+For the removed block $q(r)\le R(X)$, the coefficient derivative has $\ell^2$ norm $O_I(e^{-c_I S_d(X)})$ after the first limit. There are $O(R(X)^2)$ such ratios in the pulse. Integrating the derivative between the walls and applying Cauchy–Schwarz bounds their summed increment uniformly by $O_I(h R(X)e^{-c_I S_d(X)})=o(h)$. Its $L^2(\omega(s)\,ds)$ norm is consequently $o(h)$. The full increment has norm $O(\sqrt h)$ by the displayed inequality, so removing the block changes its squared norm by $o(h)$. [Coefficient estimate](prime-two-increments.md#prime-phases) and [denominator cutoff](prime-two-increments.md#distinct-ratios).
+
+For the $O(h)$ conclusion alone, take any constant $B$ that bounds the removed increment divided by $h$ for all sufficiently large $X$ on $\{\omega>0\}$. Using $|a+b|^2\le2|a|^2+2|b|^2$ gives $E_X\le 2h\|\omega\|_\infty M_X^2+2B^2h^2\int\omega(s)\,ds$. Lean checks the change of integration order, this inequality for a complex density and the resulting $E_X=O(h)$ implication. The preceding area and coefficient estimates provide its two uniform bounds for the original test. [Lean proof](PrimeTwoWallEnergy.lean) and [build instructions](README.md#lean-checks).
 
 ## The coefficient
 

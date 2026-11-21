@@ -1,7 +1,17 @@
-import PrimeTwoIncrements
+import PrimeTwoWallEnergy
 
+#check PrimeTwoWallEnergy.wall_energy_identity
+#check PrimeTwoWallEnergy.wall_energy_bound
+#check PrimeTwoWallEnergy.density_wall_energy_bound
+#check PrimeTwoWallEnergy.tail_energy_bound
+#check PrimeTwoWallEnergy.tail_energy_isBigO
 #check PrimeTwoIncrements.integrated_overlap_bound
 #check PrimeTwoIncrements.weighted_pair_limit
+#print axioms PrimeTwoWallEnergy.wall_energy_identity
+#print axioms PrimeTwoWallEnergy.wall_energy_bound
+#print axioms PrimeTwoWallEnergy.density_wall_energy_bound
+#print axioms PrimeTwoWallEnergy.tail_energy_bound
+#print axioms PrimeTwoWallEnergy.tail_energy_isBigO
 #print axioms PrimeTwoIncrements.overlap_bound
 #print axioms PrimeTwoIncrements.integrated_overlap_bound
 #print axioms PrimeTwoIncrements.overlap_off

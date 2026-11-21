@@ -1,5 +1,5 @@
 name = "riemann_trace"
-defaultTargets = ["PrimeTwoContinuity", "PrimeTwoIncrements", "PrimeTwoPairSieve", "PrimeTwoDyadicModes", "PrimeTwoKernelWall", "PrimeTwoRatios", "PrimeTwoEta"]
+defaultTargets = ["PrimeTwoContinuity", "PrimeTwoIncrements", "PrimeTwoWallEnergy", "PrimeTwoPairSieve", "PrimeTwoDyadicModes", "PrimeTwoKernelWall", "PrimeTwoRatios", "PrimeTwoEta"]
 
 [leanOptions]
 warningAsError = true
@@ -14,6 +14,9 @@ name = "PrimeTwoContinuity"
 
 [[lean_lib]]
 name = "PrimeTwoIncrements"
+
+[[lean_lib]]
+name = "PrimeTwoWallEnergy"
 
 [[lean_lib]]
 name = "PrimeTwoPairSieve"

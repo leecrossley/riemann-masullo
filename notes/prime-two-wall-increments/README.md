@@ -13,11 +13,13 @@ lake build
 for audit in AuditContinuity AuditIncrements AuditPairSieve AuditDyadicModes AuditKernelWall; do
   lake env lean "$audit.lean" || exit 1
 done
-lake env leanchecker -v PrimeTwoContinuity PrimeTwoIncrements PrimeTwoPairSieve PrimeTwoDyadicModes PrimeTwoKernelWall PrimeTwoRatios PrimeTwoEta
+lake env leanchecker -v PrimeTwoContinuity PrimeTwoIncrements PrimeTwoWallEnergy PrimeTwoPairSieve PrimeTwoDyadicModes PrimeTwoKernelWall PrimeTwoRatios PrimeTwoEta
 ```
 
-The theorem `integrated_overlap_bound` bounds the double integral of the interval overlap by $hCM^2$ for a finite measure of mass $M$, a weight bounded in absolute value by $C$ and a complex factor of modulus at most one. In the proof note the measure is the total variation of $\mu_X$ and the complex factor is the product of its phase at one point and the conjugate phase at the other. Theorems `weighted_pair_limit` and `weighted_pair_zero_iff` check the limiting overlap sum for an absolutely summable family of real jumps and characterise when that sum vanishes. [Lean source](PrimeTwoIncrements.lean) and [theorem and axiom checks](AuditIncrements.lean).
+The theorem `wall_energy_identity` expands the weighted square of the complex wall integral and proves the change of order that gives the interval overlap. The theorem `density_wall_energy_bound` applies this to an integrable complex density and gives $hCM^2$, where $C$ bounds the weight and $M$ is the integral of the absolute density. For the tail, `tail_energy_isBigO` proves $O(h)$ from a uniform bound on $M$ and a bound $Bh$ on the change contributed by the removed denominators wherever the weight is positive. [Wall energy proofs](PrimeTwoWallEnergy.lean) and [theorem and axiom checks](AuditIncrements.lean).
+
+For an absolutely summable family of real jumps, `weighted_pair_limit` computes the limiting overlap sum. The theorem `weighted_pair_zero_iff` characterises when it vanishes. [Jump lemmas](PrimeTwoIncrements.lean).
 
 The other checks cover the one-sided limits of an exterior sum, finite Fourier orthogonality for ratio pairs, the dyadic band identities, the three-wall profile and the finite matrix commutator. [Continuity](PrimeTwoContinuity.lean), [ratio pairs](PrimeTwoPairSieve.lean), [dyadic bands](PrimeTwoDyadicModes.lean) and [three walls](PrimeTwoKernelWall.lean).
 
-The analytic work identifying $\mu_X$, bounding its total variation uniformly in $X$ and passing from the heat measure to the zeta line sums is in the proof note. Those steps specify how the Lean lemmas apply to the original tail. [Area estimate](prime-two-denominators.md#every-wall), [two-scale limit](prime-two-increments.md#two-scales) and [remaining line sums](prime-two-kernel-wall.md).
+The proof note supplies the inputs for Masullo’s tail after $K\to\infty$ by identifying the heat density and bounding its total variation and the contribution of the removed block. It also identifies the coefficient of $h$ with the zeta line sums. [Area estimate](prime-two-denominators.md#every-wall), [denominator estimate](prime-two-increments.md#distinct-ratios), [two-scale limit](prime-two-increments.md#two-scales) and [remaining line sums](prime-two-kernel-wall.md).
