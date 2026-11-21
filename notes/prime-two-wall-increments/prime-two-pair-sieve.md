@@ -4,15 +4,15 @@ At $h=1/\log X$, a signed part of the original prime 2 sum over distinct ratios 
 
 ## Matching exponents
 
-Fix $1/2<d<e<1$ and $0\le\omega\in C_c((d,e))$. Put $h=1/\log X$ and take $X$ large enough that the two walls over the support of $\omega$ stay in $I=[d,e]$. With the original pulse $g$, write $W_s(r)=r^{s-1/2}g(\log r)$, $H(z)=\int g(v)e^{zv}\,dv$ and $b_r(s)=a_{K,X}(s+h/2,r)-a_{K,X}(s-h/2,r)$. All sums over $r$ in the energy below have reduced denominator $q(r)>R(X)$. Here $R(X)=\lfloor e^{c_I S_d(X)/2}\rfloor$, with $S_d(X)=(\log X)^{1/(1-d)}(\log\log X)^{d/(1-d)}$ and the same $c_I>0$ as in the coefficient estimate. [Squared increments](prime-two-increments.md#prime-phases).
+Fix $1/2<d<e<1$ and $0\le\omega\in C_c((d,e))$. Put $h=1/\log X$ and take $X$ large enough that the two walls over the support of $\omega$ stay in $I=[d,e]$. With the original pulse $g$, write $W_s(r)=r^{s-1/2}g(\log r)$, $`H(z)=\int g(v)e^{zv}\,dv`$ and $b_r(s)=a_{K,X}(s+h/2,r)-a_{K,X}(s-h/2,r)$. All sums over $r$ in the energy below have reduced denominator $q(r)>R(X)$. Here $R(X)=\lfloor e^{c_I S_d(X)/2}\rfloor$, with $S_d(X)=(\log X)^{1/(1-d)}(\log\log X)^{d/(1-d)}$ and the same $c_I>0$ as in the coefficient estimate. [Squared increments](prime-two-increments.md#prime-phases).
 
 Choose a finite set $P$ of odd primes. Give $p\in P$ a unit phase $u_p$, put $\chi_u(r)=\prod_{p\in P}u_p^{v_p(r)}$ and integrate the phases against Haar probability measure. The identity
 
-$$
+```math
 \int_{\mathbb T^P}\left|\sum_r b_r(s)\chi_u(r)\right|^2du
 =\sum_{\substack{r,r'\\ v_p(r)=v_p(r')\ \forall p\in P}} b_r(s)\overline{b_{r'}(s)}
 \tag{1}
-$$
+```
 
 holds before either limit by character orthogonality and absolute convergence at finite $K,X$. Subtracting (1) from the squared sum at $u_p=1$ gives exactly the signed sum of pairs which differ at some $p\in P$. All these pairs are distinct. Lean checks the finite Fourier identity on a product of unit circles. [Lean proof](PrimeTwoPairSieve.lean).
 
@@ -30,10 +30,10 @@ For $\Re z>0$ each factor of $M_u$ has constant coefficient one and coefficient 
 
 For the sum over all ratios, the twisted increment after this limit is the mass between the two walls for the complex measure
 
-$$
+```math
 d\mu_{X,u}(z)=\frac X\pi H(z-1/2)|f'_u(z)|^2e^{-X|f_u(z)|^2}\,dA(z).
 \tag{2}
-$$
+```
 
 Indeed differentiating each original weighted coefficient gives twice $W_s(r)$ times the Fourier coefficient at $r$ of $X|\dot E_K|^2e^{-X|E_K|^2}$. Since $W_s(r)=(2\pi)^{-1}\int H(s-1/2+it)e^{-it\log r}dt$, the sum evaluates the density along $z_p=u_p p^{-it}$, with $u_p=1$ off $P$. Integration across the two walls gives (2). For $q(r)\le R(X)$ the absolute sum of the increments after the first limit is $O_I(hR(X)e^{-c_I S_d(X)})$ by Cauchy–Schwarz and the original coefficient bound, uniformly in the phases. Its $L^2(\omega)$ norm divided by $\sqrt h$ tends to zero. [Coefficient derivative](prime-two-increments.md#one-coefficient).
 
@@ -54,7 +54,7 @@ For each height $T$, centre a disc at $4+iT$, choose an inner radius between $4-
 
 On a fixed rectangle choose the edges away from zeros and the vertical edges outside the wall intervals. Surround each zero $\rho$ of $\eta$ there by a disc of radius $h^2$. On its circumference $|\eta|\gg_\rho h^{2m_\rho}$, with $m_\rho$ the multiplicity. This exceeds $X^{-1/4+o(1)}$ for every fixed $m_\rho$. Rouché's theorem gives exactly $m_\rho$ preimages of every $|w|\le X^{-1/4}$ in this disc. There are no others on the rectangle, by the local lower bound for $|\eta|$ near each zero and its positive minimum away from fixed zero neighbourhoods. Integrating the small values in $w$ uses Gaussian mass $1-e^{-\sqrt X}$. Thus the mass near $\rho$ tends to $m_\rho H(\rho-1/2)$ uniformly in the phases, in discs of horizontal diameter $o(h)$.
 
-For two positions $x,x'$ on the real axis, the kernel of the energy divided by $h$ is $h^{-1}\int_{|s-x|<h/2,\ |s-x'|<h/2}\omega(s)ds$. It is bounded by $\|\omega\|_\infty$. For two zero discs with different real parts it eventually vanishes, and for a common real part $\beta$ it tends uniformly on the pair of discs to $\omega(\beta)$. The uniform variation estimate lets us restore the large heights after taking this limit on the rectangle. In particular, with $J_\beta=\sum_{\Re\rho=\beta}m_\rho H(\rho-1/2)$,
+For two positions $x,x'$ on the real axis, the kernel of the energy divided by $h$ is $h^{-1}\int_{|s-x|<h/2,\ |s-x'|<h/2}\omega(s)ds$. It is bounded by $`\|\omega\|_\infty`$. For two zero discs with different real parts it eventually vanishes, and for a common real part $`\beta`$ it tends uniformly on the pair of discs to $`\omega(\beta)`$. The uniform variation estimate lets us restore the large heights after taking this limit on the rectangle. In particular, with $`J_\beta=\sum_{\Re\rho=\beta}m_\rho H(\rho-1/2)`$,
 
 $$
 \sup_{u\in\mathbb T^{P_X}}\left|
@@ -75,7 +75,7 @@ Consequently the entire possible coefficient of $h$ is carried by pairs with $q(
 
 The residual class already contains positive subseries at the first nonzero Taylor order of the square. Fix a large $X$ and hold its $h,R,Y=(\log X)^2$ fixed while expanding in an auxiliary heat parameter $\lambda$ at zero. Choose $0<\varepsilon<1$ with $g(\log r)=1$ on $(2,2+\varepsilon)$. Take denominators that are odd primes $p>\max(R,Y)$, and numerators $n$ with $n/p$ in this interval and $n\equiv1\pmod{2\prod_{3\le l\le Y,\ l\ {\rm prime}}l}$. Each ratio is reduced. Every multiple of $(n,p)$ has positive sign in the coefficient of $\lambda$ in $b_{n/p}$ because both $n,p$ are odd. Its first multiple alone contributes $\gg h(\log p)^2p^{-2e}$ for $n\le K$, by the exact factor $2(\log n)\sinh(h\log p)p^{-2s}/\sqrt{n/p}$. [Wall averaging](prime-two-increments.md#wall-averaging).
 
-Each half of the ratio interval supplies $\gg_Y p$ such numerators for each sufficiently large prime $p\le K/(2+\varepsilon)$. Pair the two halves. No resulting quotient has an odd prime factor at most $Y$. The product of their two positive sums diverges as $K\to\infty$, since $\sum_{p}p^{1-2e}(\log p)^2$ diverges. Removing $\min(a,b)\le R^2$ costs at most $O_I(R^4 h^2)$ pointwise at this Taylor order. Indeed the coefficient derivative at $\lambda=0$ in the wall derivative is $2W_s\widehat{|\dot E_K|^2}$, and $\|\dot E_K\|_4$ is bounded uniformly in $K,s$ on $I$. The same quotient bound applies. A nonzero $\omega\ge0$ preserves the divergence after integration. Thus even in the residual class absolute summation of the $\lambda^2$ coefficient loses cancellations. This calculation leaves the signed, fully resummed heat expression at $\lambda=X$ open.
+Each half of the ratio interval supplies $\gg_Y p$ such numerators for each sufficiently large prime $p\le K/(2+\varepsilon)$. Pair the two halves. No resulting quotient has an odd prime factor at most $Y$. The product of their two positive sums diverges as $K\to\infty$, since $\sum_{p}p^{1-2e}(\log p)^2$ diverges. Removing $\min(a,b)\le R^2$ costs at most $O_I(R^4 h^2)$ pointwise at this Taylor order. Indeed the coefficient derivative at $\lambda=0$ in the wall derivative is $2W_s\widehat{|\dot E_K|^2}$, and $`\|\dot E_K\|_4`$ is bounded uniformly in $K,s$ on $I$. The same quotient bound applies. A nonzero $\omega\ge0$ preserves the divergence after integration. Thus even in the residual class absolute summation of the $\lambda^2$ coefficient loses cancellations. This calculation leaves the signed, fully resummed heat expression at $\lambda=X$ open.
 
 ## Heat factor
 
