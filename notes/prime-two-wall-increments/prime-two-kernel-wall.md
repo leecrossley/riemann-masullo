@@ -8,18 +8,18 @@ Fix $1/2<\beta<1$, set $h=1/\log X$ and $d=h/2$, and take $X$ large enough that 
 
 For $|x-\beta|\le d$ put
 
-$$
+```math
 V(x,t)=\int p(v)\frac{\sinh((d-|x-\beta|)v)}{\sinh(dv)}e^{itv}\,dv
-$$
+```
 
 and put $V=0$ outside. The pulse support is compact and stays away from $v=0$. In either open half of the strip, $\partial_x^2 V=-\partial_t^2 V$. On the centre wall $V=\widehat p$, while $V$ vanishes on the two outside walls. Set $b_d(v)=p(v)v/\sinh(dv)$ and $c_d(v)=p(v)v\coth(dv)$. The jumps of the first horizontal derivative give the following functional on a real potential $U$.
 
-$$
+```math
 D_{\beta,d}(U)=\frac1{2\pi}\int_{\mathbb R}
 \left[\widehat b_d(t)\bigl(U(\beta+d,t)+U(\beta-d,t)\bigr)-2\widehat c_d(t)U(\beta,t)\right]dt
 =\frac1{2\pi}\iint V\,\Delta U .
 \tag{1}
-$$
+```
 
 This is integration by parts for $\Delta V$. It gives zero for a harmonic potential whose value and first derivatives have at most polynomial growth on the strip. In particular, if $U=\log|E(x+it)|$ for a holomorphic function, a zero $\rho$ contributes $m_\rho V(\Re\rho,\Im\rho)$. This follows from $\Delta\log|w-\rho|=2\pi\delta_\rho$. A pole has the opposite sign. For the completed zeta function the formula applies on every wall, including one through a zero. One justification is its genus-one product. On a unit height interval near $T$ each nearby logarithmic singularity has integrable negative part bounded by 2, since $|x+it-\rho|\ge|t-\Im\rho|$. Factors with $|\rho|$ up to $2(|T|+3)$ therefore cost at most a polynomial in $|T|$ in local $L^1$, by the zero count. For the other factors the subtracted logarithm is $O((1+|T|)^2/|\rho|^2)$. These estimates allow (1) term by term against the rapidly decaying test. For an individual logarithm one may smooth in $x$ first and pass to its locally integrable trace on each wall. [Hadamard product and zero count](https://terrytao.wordpress.com/2021/02/12/246b-notes-4-the-riemann-zeta-function-and-the-prime-number-theorem/).
 
@@ -27,9 +27,9 @@ This is integration by parts for $\Delta V$. It gives zero for a harmonic potent
 
 Take $E=\eta_K(w)=\sum_{n\le K}(-1)^{n-1}n^{-w}$ and use the potential
 
-$$
+```math
 U_{K,X}(w)=\frac12\int_0^{X|\eta_K(w)|^2}\frac{1-e^{-y}}{y}\,dy .
-$$
+```
 
 Differentiating in the radial variable gives $\Delta U_{K,X}=2X|\eta'_K|^2e^{-X|\eta_K|^2}$, including at a zero by smooth extension. At each fixed $X$ the limit in $K$ passes through (1). Indeed $\eta_K,\eta'_K$ converge locally uniformly to $\eta,\eta'$ and have uniform polynomial bounds on the closed substrip by partial summation of the alternating series. Thus the right side of (1) uses exactly the Gaussian area density of the original trace after its first limit. [Original coefficient identity](prime-two-increments.md#one-coefficient).
 
@@ -48,21 +48,21 @@ On the rational radial global theta generator $e^{u/2}\sum_{n\ge1}\Phi(ne^u)$, t
 
 At every fixed $d$ the exact result for the global generator is
 
-$$
+```math
 D_{\beta,d}(\log|\xi|)=D_{\beta,d}(\log|Z_o|)
 =\sum_{|\Re\rho-\beta|<d}m_\rho V(\Re\rho,\Im\rho).
 \tag{3}
-$$
+```
 
 A zero outside the two outer walls contributes exactly zero already at this spacing. In particular, the pole at 1 creates no term in (3). A finite odd Euler product gives zero even in each of the three separate integrals. The real logarithm of each factor has only cosine frequencies $j\log p$, $j\ge1$, all above $\log(5/2)$, whereas $b_d,c_d$ are supported at $|v|<\log(5/2)$. The infinite Euler series establishes the same frequency statement on a wall to the right of 1.
 
 Here is a direct check of what goes wrong with using that series on a single interior wall. Write $B_p(s)=(2\pi)^{-1}\int\widehat p(t)\log|Z_o(s+it)|dt$ with the even test $p$ fixed. For $1/2<s<1$ one has
 
-$$
+```math
 B_p(s)=-\int p(v)\frac{\sinh((1-s)v)}{v}dv
 +\sum_{\Re\rho>s}m_\rho\int p(v)\frac{\sinh((\Re\rho-s)v)}{v}e^{i\Im\rho\,v}dv .
 \tag{4}
-$$
+```
 
 Integrate Green's identity on $s<x<2$ using the harmonic test $\int p(v)\sinh((x-s)v)e^{itv}dv/v$. Its value at $s$ is zero and its derivative there is $\widehat p$. On the wall at 2 both terms vanish by the absolutely convergent odd Euler series and the support of $p$, also after multiplying $p$ by $\cosh((2-s)v)$ or $\sinh((2-s)v)/v$. The sources in the strip are the pole at 1 and the zeros to its left. The product estimate used for (1) justifies Green's identity by testing the individual factors. Equivalently subtract the smooth gamma and dyadic logarithms from $\log|\xi|$, retaining the pole at 1. A zero exactly on $s$ has weight zero in (4).
 
@@ -82,6 +82,6 @@ One can isolate this block without a basis for the other zeros. Write $G$ for th
 
 The same finite-rank comparison can be made at the exact width $\alpha=|\Re z|>0$. The rank there is $\min(m,2)$. The evaluations of orders zero and one are continuous on the wall because $\int_1^\infty u^{2j}(1+u^2)^{-2}du$ is finite for $j=0,1$. They give the lower bound up to the multiplicity. For the upper bound, $e^{-\alpha|t|}(1+|t|)^{-2}S_t v$ tends weakly to zero as $|t|\to\infty$. The normalised operators have norm at most one by the translation bound, and the pairings of compactly supported vectors vanish eventually. Density gives the weak limit and it persists on the quotient. On the side where $|e^{-zt}|=e^{\alpha|t|}$, a nonzero coefficient of degree at least two in the quotient polynomial would violate this limit. Hence its degree is at most one. For $\alpha<|\Re z|$ the same growth bound rules out every polynomial coefficient. Thus the traces of this particular projection difference immediately below, exactly at and immediately above the width are $0$, $\min(m,2)\int f(t)e^{zt}dt$ and $m\int f(t)e^{zt}dt$ respectively. No assertion about the span of all the other boundary modes is needed.
 
-On the dual block use $e_j(u)=u^j e^{zu}/j!$, $0\le j<m$. For $S_t e(u)=e(u+t)$ set $T_k=\int k(t)S_tdt$ and $M e(u)=u e(u)$. The original reflected pulse vanishes near zero, so $k(t)=g(t)/t$ is smooth and compactly supported. On the full polynomial orbit $[T_k,M]=T_g$. Writing $C(z)=\int k(t)e^{zt}dt$ gives $C'(z)=H(z)$ and $T_k e_j=\sum_{l=0}^j C^{(l)}(z)e_{j-l}/l!$. Multiplication by $u$ sends $e_{m-1}$ to $m e_m$, outside the retained block. If $M_m$ drops that last term and $T_{k,m}$ is the restriction, the difference $T_g|_m-[T_{k,m},M_m]$ has just the last column, with entries given by $m\sum_{l=1}^m C^{(l)}(z)e_{m-l}/l!$. Its trace is $m C'(z)=mH(z)$. This is a finite matrix computation on an invariant quotient and does not require commuting an unbounded operator through an infinite trace.
+On the dual block use $e_j(u)=u^j e^{zu}/j!$, $0\le j<m$. For $S_t e(u)=e(u+t)$ set $T_k=\int k(t)S_tdt$ and $M e(u)=u e(u)$. The original reflected pulse vanishes near zero, so $k(t)=g(t)/t$ is smooth and compactly supported. On the full polynomial orbit $[T_k,M]=T_g$. Writing $C(z)=\int k(t)e^{zt}dt$ gives $C'(z)=H(z)$ and $T_k e_j=\sum_{l=0}^j C^{(l)}(z)e_{j-l}/l!$. Multiplication by $u$ sends $e_{m-1}$ to $m e_m$, outside the retained block. If $M_m$ drops that last term and $T_{k,m}$ is the restriction, the difference $`T_g|_m-[T_{k,m},M_m]`$ has just the last column, with entries given by $m\sum_{l=1}^m C^{(l)}(z)e_{m-l}/l!$. Its trace is $m C'(z)=mH(z)$. This is a finite matrix computation on an invariant quotient and does not require commuting an unbounded operator through an infinite trace.
 
 Conjugate zeros can cancel only through the real parts of the pulse weights. Reflection across the centre gives $H(-z)=H(z)$, so it gives equal weights. Equations (2) and (3) leave the full signed sum of these blocks on the centre wall. The original two bands would give $o(h)$ for every continuous nonnegative interior weight if these line sums vanished for every $1/2<\beta<1$. I could not establish that cancellation. Lean checks the differential equation and endpoint values of the test profile, the compressed matrix commutator and the trace of its last column. The Green identities, Gaussian limit and quotient argument are analytic. At heights 1536 and 2048 both grids give $B_p(3/4)\simeq-0.00372920$. The three-wall and area integrals of the original potential at $K=3$, $X=64$ both give $0.15992422$, agreeing to $1.4\times10^{-12}$ on the longer grid. These are finite quadrature checks. [Lean source](PrimeTwoKernelWall.lean) and [numerical check](prime-two-kernel-wall.py).
