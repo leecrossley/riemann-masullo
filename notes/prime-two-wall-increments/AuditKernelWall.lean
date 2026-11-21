@@ -1,0 +1,13 @@
+import PrimeTwoKernelWall
+
+#check PrimeTwoKernelWall.profile_endpoints
+#check PrimeTwoKernelWall.profile_derivative
+#check PrimeTwoKernelWall.profile_curvature
+#check PrimeTwoKernelWall.compressed_commutator
+#check PrimeTwoKernelWall.top_jet_trace
+
+#print axioms PrimeTwoKernelWall.profile_endpoints
+#print axioms PrimeTwoKernelWall.profile_derivative
+#print axioms PrimeTwoKernelWall.profile_curvature
+#print axioms PrimeTwoKernelWall.compressed_commutator
+#print axioms PrimeTwoKernelWall.top_jet_trace

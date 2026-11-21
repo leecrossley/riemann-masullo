@@ -1,0 +1,10 @@
+import PrimeTwoIncrements
+
+#check PrimeTwoIncrements.integrated_overlap_bound
+#check PrimeTwoIncrements.weighted_pair_limit
+#print axioms PrimeTwoIncrements.overlap_bound
+#print axioms PrimeTwoIncrements.integrated_overlap_bound
+#print axioms PrimeTwoIncrements.overlap_off
+#print axioms PrimeTwoIncrements.overlap_on
+#print axioms PrimeTwoIncrements.weighted_pair_limit
+#print axioms PrimeTwoIncrements.weighted_pair_zero_iff

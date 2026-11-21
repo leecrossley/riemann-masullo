@@ -1,0 +1,7 @@
+import PrimeTwoPairSieve
+
+#check PrimeTwoPairSieve.matching_exponents
+#check PrimeTwoPairSieve.quotient_set_bound
+#print axioms PrimeTwoPairSieve.matching_exponents
+#print axioms PrimeTwoPairSieve.one_quotient_bound
+#print axioms PrimeTwoPairSieve.quotient_set_bound

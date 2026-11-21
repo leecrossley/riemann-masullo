@@ -1,0 +1,12 @@
+import PrimeTwoContinuity
+
+#check PrimeTwoContinuity.exteriorTail_continuousAt_iff
+#print axioms PrimeTwoContinuity.left_limit
+#print axioms PrimeTwoContinuity.right_limit
+#print axioms PrimeTwoContinuity.midpoint_value
+#print axioms PrimeTwoContinuity.continuousAt_iff_onWall_zero
+#print axioms PrimeTwoContinuity.continuousOn_iff_onWall_zero
+#print axioms PrimeTwoContinuity.wall_eq_zero_of_onWall_zero
+#print axioms PrimeTwoContinuity.exteriorTail_eq
+#print axioms PrimeTwoContinuity.exteriorTail_continuousAt_iff
+#print axioms PrimeTwoContinuity.exteriorTail_eq_pole
