@@ -50,7 +50,7 @@ At every fixed $d$ the exact result for the global generator is
 
 ```math
 D_{\beta,d}(\log|\xi|)=D_{\beta,d}(\log|Z_o|)
-=\sum_{|\Re\rho-\beta|<d}m_\rho V(\Re\rho,\Im\rho).
+=\sum_{|\Re\rho-\beta|\lt d}m_\rho V(\Re\rho,\Im\rho).
 \tag{3}
 ```
 

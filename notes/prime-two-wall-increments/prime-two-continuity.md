@@ -34,7 +34,7 @@ For a fixed integer $k\ge1$ and $\lambda>0$ set $h_X=\lambda X^{-1/(2k)}$. The a
 
 ```math
 \lim_{X\to\infty}\big[F_X(\beta+h_X)-F_X(\beta-h_X)\big]
-=\sum_{\substack{\Re\rho=\beta\\m_\rho<k}}w_\rho
+=\sum_{\substack{\Re\rho=\beta\\m_\rho\lt k}}w_\rho
 +\sum_{\substack{\Re\rho=\beta\\m_\rho=k}}w_\rho\Psi_k(\lambda d_\rho).
 ```
 

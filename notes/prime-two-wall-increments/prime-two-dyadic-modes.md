@@ -9,7 +9,7 @@ Fix $I=[d,e]\Subset(1/2,1)$, $0\le\omega\in C_c((d,e))$ and a centre $s$ in its 
 The integer $k=v_2(r)-v_2(r')=v_2(a)-v_2(b)$ labels each pair. Define two sets of integers, using the wall at the indicated sign,
 
 ```math
-\mathcal B_\pm(K,s)=\{k:K^{1-\sigma_\pm-\varepsilon}<|k|<K^{1-\sigma_\pm+\varepsilon}\}.
+\mathcal B_\pm(K,s)=\{k:K^{1-\sigma_\pm-\varepsilon}\lt |k|\lt K^{1-\sigma_\pm+\varepsilon}\}.
 \tag{1}
 ```
 
@@ -83,9 +83,7 @@ Thus the absolute sum of the grouped coefficients of $A_K$ outside $\mathcal B_+
 
 ```math
 \begin{aligned}
-\lim_K S_+(K,X)&=\int\omega(s)\lim_K A_K(s,0)\,ds,\\
-\lim_K S_-(K,X)&=\int\omega(s)\lim_K B_K(s,0)\,ds,\\
-\left|\lim_K S_0(K,X)\right|&\ll_{I,\omega} h^2.
+\lim_K S_+(K,X)&=\int\omega(s)\lim_K A_K(s,0)\,ds,\\ \lim_K S_-(K,X)&=\int\omega(s)\lim_K B_K(s,0)\,ds,\\ \left|\lim_K S_0(K,X)\right|&\ll_{I,\omega} h^2.
 \end{aligned}
 \tag{6}
 ```
